@@ -7,22 +7,32 @@
 </head>
 <body>
 <div class="container-box">
-<form class="inputs">
+    <div class="inputs">
     <h1>Grocery list</h1>
     <label for="item"></label>
-    <input type="text" id="newItem" placeholder="next item">
-    <input type="text" id="newAmount" placeholder="amount">
+    <input type="text" name="item" id="newItem" placeholder="next item">
+    <input type="text" name="item" id="newAmount" placeholder="amount">
     <div class="categories-input" >
-    <input type="radio" id="produce-checkbox">Produce</input>
-    <input type="radio" id="dairy-checkbox">Dairy</input>
-    <input type="radio" id="meat-checkbox">Meat</input>
-    <input type="radio" id="dry-goods-checkbox">Dry Goods</input>
-    <input type="radio" id="home-checkbox">Home</input>
+        <label for="produce-checkbox">Produce</label>
+        <input type="radio" name="category" value="produce" id="produce-check">
+
+        <label for="dairy-checkbox">Dairy</label>
+        <input type="radio" name="category" value="dairy" id="dairy-check">
+
+        <label for="meat-checkbox">Meat</label>
+        <input type="radio" name="category" value="meat" id="meat-check">
+
+        <label for="dry-goods-checkbox">Dry Goods</label>
+        <input type="radio" name="category" value="dry-goods" id="dry-goods-check">
+
+        <label for="home-checkbox">Home</label>
+        <input type="radio" name="category" value="home" id="home-check">
     </div>
     <button id="addButton">ADD</button>
-</form>
-<div class="categories-list">
+</div>
 
+
+<div class="categories-list">
     <div id="produce" class="category">
     <h2>Produce</h2>
     <ul>
@@ -45,7 +55,6 @@
 
     <div id="meat" class="category">
         <h2>Meat</h2>
-        
     </div>
 
     <div id="dry-goods" class="category">
@@ -55,9 +64,10 @@
     <div id="Home" class="category">
         <h2>Home</h2>
     </div>
+</div>
     <button id="addNewCat">Add New Category</button>
 </div>
-</div>
+
     <script src="./main.js"></script>
 </body>
 </html>

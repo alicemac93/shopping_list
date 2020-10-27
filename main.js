@@ -1,17 +1,16 @@
 // input targets
 let newItem = document.getElementById("newItem");
 let amountInput = document.getElementById("newAmount");
-const producecheck = document.getElementById("produce-checkbox");
-const dairycheck = document.getElementById("dairy-checkbox");
-const meatcheck = document.getElementById("meat-checkbox");
-const drycheck = document.getElementById("dry-goods-checkbox");
-const homecheck = document.getElementById("home-checkbox");
+const producecheck = document.getElementById("produce-check");
+const dairycheck = document.getElementById("dairy-check");
+const meatcheck = document.getElementById("meat-check");
+const drycheck = document.getElementById("dry-goods-check");
+const homecheck = document.getElementById("home-check");
 const AddBtn = document.getElementById("addButton");
 const checkbox = document.querySelector("input");
-const NewCategoryButton = document.getElementById("addNewCat");
 
-let shoppingList = document.querySelector("ul");
-
+let radio = document.getElementsByName("category");
+let j = radio.length;
 
 // category targets
 let item = document.getElementById("itemValue");
@@ -19,23 +18,15 @@ let amount = document.getElementById("itemAmount");
 let categories = document.getElementsByClassName("categories-list");
 
 
-
-// then pass this into category below. 
-function setCategory(){
-    let selectedCategory;
-if (producecheck.checked){selectedCategory="produce";
-} else if (dairycheck.checked) {selectedCategory="dairy";
-} else if (meatcheck.checked) {selectedCategory="meat";
-} else if (drycheck.checked) {selectedCategory="dry-goods";
-} else {console.log("error")}
-return selectedCategory;
-};
-
 // remake to target.value for an event - not sure how it is with checkboxes
 
 AddBtn.addEventListener("click", addNewItem);
 function addNewItem() {
-    let selectedCategory = setCategory();
+    // selected category
+    let selectedCategory;
+    for (let i = 0; i<j; i++){
+        if (radio[i].checked) {selectedCategory = radio[i].value}   
+ };
     let category;
     switch (selectedCategory) {
         case "produce":
@@ -53,7 +44,7 @@ function addNewItem() {
         default: "nevim"
             break;
     }
-
+   
     const list = document.createElement("ul");
     category.appendChild(list);
 
@@ -75,16 +66,15 @@ function addNewItem() {
     removeButton.onclick = function(){
         list.parentNode.removeChild(list);
     }
-
 }
 
-// checked 
+/* checked 
 list.addEventListener("click", checked)
 function checked(event){
     if (event.target.type = "LI")
     event.target.classList.toggle("checked");
 }
-/*
+
 NewCategoryButton.addEventListener("click", addNewCategory);
 
 function addNewCategory() {
@@ -98,7 +88,7 @@ function addNewCategory() {
    // categories.parentNode.appendChild(categories);
    const newRadio = document.createElement("INPUT");
     newRadio.setAttribute("type", "radio");
-    newRadio.textContent = heading.value // is it like that? 
+    newRadio.textContent = .value // is it like that? 
 }
 
 */
