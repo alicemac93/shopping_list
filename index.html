@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="container-box">
+<form class="inputs">
+    <h1>Grocery list</h1>
+    <label for="item"></label>
+    <input type="text" id="newItem" placeholder="next item">
+    <input type="text" id="newAmount" placeholder="amount">
+    <div class="categories-input" >
+    <input type="radio" id="produce-checkbox">Produce</input>
+    <input type="radio" id="dairy-checkbox">Dairy</input>
+    <input type="radio" id="meat-checkbox">Meat</input>
+    <input type="radio" id="dry-goods-checkbox">Dry Goods</input>
+    <input type="radio" id="home-checkbox">Home</input>
+    </div>
+    <button id="addButton">ADD</button>
+</form>
+<div class="categories-list">
+
+    <div id="produce" class="category">
+    <h2>Produce</h2>
+    <ul>
+        <li class="grocery-item">
+        <span id="itemValue" class="groceryItem">Apples</span>
+        <span id="itemAmount" class="amounts">4</span>
+        </li>
+    </ul>
+    </div>
+
+    <div id="dairy" class="category">
+        <h2>Dairy</h2>
+        <ul>
+        <div class="grocery-item">
+            <li>milk</li>
+            <span class="amounts">4</span>
+         </div>
+        </ul>
+    </div>
+
+    <div id="meat" class="category">
+        <h2>Meat</h2>
+        
+    </div>
+
+    <div id="dry-goods" class="category">
+        <h2>Dry Goods</h2>
+    </div>
+
+    <div id="Home" class="category">
+        <h2>Home</h2>
+    </div>
+    <button id="addNewCat">Add New Category</button>
+</div>
+</div>
+    <script src="./main.js"></script>
+</body>
+</html>

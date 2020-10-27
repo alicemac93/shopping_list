@@ -1,0 +1,38 @@
+
+.inputs {
+    border: solid green;
+    display: block;
+    text-align: center;
+    padding: 7% 10%;
+}
+
+.categories-list {
+    display: flex;
+    border: solid yellow;
+    justify-content: center;
+}
+
+.category {
+ border: solid blue;
+ width: 200px; /* change to grid view */
+}
+
+.category h2 {
+    text-align: left;
+}
+
+.grocery-item{
+    display: flex;
+    flex-direction: row;
+    border: solid red;
+}
+.amounts {
+    text-align: right;
+padding-left: 5%;}
+
+.removeButton {
+    padding-left: 15px;
+}
+.checked {
+    text-decoration: line-through;
+}
